@@ -1,6 +1,6 @@
 # The dev challenge app
 
-[The challenge](challenge-md) was proposed on May 1st 2020
+[The challenge](challenge.md) was proposed on May 1st 2020
 
 ## The application
 
@@ -8,6 +8,7 @@ The Application is created using ExpressJS with some helper packages
 
 - `morgan` to output each call
 - `helmet` to convert application headers to useful ones
+- `express-validator` to validate the request object
 - `eslint` to create a way to have consistent code across files
 
 For authentication, it uses the `jsonwebtoken` package that allow us to create a JWToken
@@ -45,11 +46,11 @@ Th existing API routes are
 
 ## Notes
 
-- It was not requested, by I would spend some time creating a very simple test suite to make sure, no matter what was changed, the application would still work correctly across time
+- the `object` routes are for the challenge response to the "Create an endpoint that can store the object; Create an endpoint that can query and return the stored object;"
 - Products are hosted in `/server/data/products.json`
-- 
+- It was not requested, by I would spend some time creating a very simple test suite to make sure, no matter what was changed, the application would still work correctly across time
 
 ## How to start
 
-- `npm run dev` will launch nodemon package 
 - `npm start` will run the server
+- use the `http` files to do requests to the server
