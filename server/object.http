@@ -1,0 +1,39 @@
+@HOST = http://localhost:3000
+@TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJkZWE5ZmJhNy05NWRhLTQwNjgtOGMxNS1kNzdjYmQzY2MzMmQiLCJuYW1lIjoiYmFsZXhhbmRyZSIsImJpcnRoIjoiMjAyMC0wNS0wMVQxODoyODoxNi4zMjhaIiwiaWF0IjoxNTg4MzU3Njk2LCJleHAiOjE1ODgzNTgyOTYsImlzcyI6Imh0dHBzOi8vYXV0aC5oZWFwLmRrL2NoYWxsZW5nZSJ9.nlD44SdMSaJGxCr2FItKk_rHOYB71Iyn0WuKo5_3Kys
+
+### get token
+POST {{HOST}}/login
+Content-Type: application/json
+
+{
+    "username": "balexandre",
+    "password": "pa55w0rd"
+}
+
+### show the saved object
+GET {{HOST}}/object
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+### save the object
+POST {{HOST}}/object
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+  "id": "779b8611f717494cb230abac00a8f40a",
+  "name": "Heap",
+  "birth": "2020-01-01T10:10:10Z",
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 200
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 400
+    }
+  ]
+}

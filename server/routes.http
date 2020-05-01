@@ -1,0 +1,30 @@
+@HOST = http://localhost:3000
+@TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIwOWQ5OTg0My1kNzhjLTRhODItOTM3ZC0wMDg5YzQwMDM3MmMiLCJuYW1lIjoiYmFsZXhhbmRyZSIsImJpcnRoIjoiMjAyMC0wNS0wMVQxNzo1OTowMS4wOTlaIiwicm9sZSI6eyJuYW1lIjoiYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJjYW5SZWFkIiwiY2FuV3JpdGUiXX0sImlhdCI6MTU4ODM1NTk0MSwiZXhwIjoxNTg4MzU2MDAxLCJpc3MiOiJodHRwczovL2F1dGguaGVhcC5kay9jaGFsbGVuZ2UifQ.EBRUOAaGM413JlIWeUl5tBNOkWbfgU5SPfQS-TV2gak
+
+### should throw 404 as route does not exists
+GET {{HOST}}
+
+### get token
+POST {{HOST}}/login
+Content-Type: application/json
+
+{
+    "username": "balexandre",
+    "password": "pa55w0rd"
+}
+
+### access public route (accessible from everyone)
+GET {{HOST}}/public
+Content-Type: application/json
+
+### access secret route (accessible from a valid token)
+# using manual middleware
+GET {{HOST}}/secret1
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+### access secret route (accessible from a valid token)
+# using express-jwt middleware
+GET {{HOST}}/secret2
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}

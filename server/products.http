@@ -1,0 +1,40 @@
+@HOST = http://localhost:3000
+@TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJiZTI0NTllMi01NGJkLTQyMzAtODc0MS00YjZmOGUwZjBmY2QiLCJuYW1lIjoiYmFsZXhhbmRyZSIsImJpcnRoIjoiRnJpLCAwMSBNYXkgMjAyMCAxNzo1MToyNyBHTVQiLCJyb2xlIjp7Im5hbWUiOiJhZG1pbiIsInBlcm1pc3Npb25zIjpbImNhblJlYWQiLCJjYW5Xcml0ZSJdfSwiaWF0IjoxNTg4MzU1NDg3LCJleHAiOjE1ODgzNTcyODcsImlzcyI6Imh0dHBzOi8vYXV0aC5oZWFwLmRrL2NoYWxsZW5nZSJ9.ezK9XOIOrYTxxKa2KOSAmIE4ASu7myroLbM4GAlBKFw
+
+
+### should throw error as token was not passed
+GET {{HOST}}/products
+Content-Type: application/json
+
+### list all products
+GET {{HOST}}/products
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+### shows product ID 5
+GET {{HOST}}/products/5
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+### deleted product ID 3
+DELETE {{HOST}}/products/3
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+### created new product with price 50
+POST {{HOST}}/products
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+    "price": 50
+}
+
+### updates product ID 1 with price = 1000
+PUT {{HOST}}/products/1
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+    "price": 1000
+}
