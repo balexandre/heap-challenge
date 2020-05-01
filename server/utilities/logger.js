@@ -8,4 +8,9 @@ const log = (message, ...args) => {
     }
 };
 
+const logError = (err) => {
+    console.log(err.message, err.stack);
+};
+
 exports.log = log;
+exports.error = logError;
