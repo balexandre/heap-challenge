@@ -8,16 +8,18 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./server/server.js",
-    "test:lint": "npx eslint ./**/*.js"
+    "dev": "nodemon ./server/server.js",
+    "lint": "npx eslint ./**/*.js"
   },
   "dependencies": {
-    "cli-table3": "^0.6.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-jwt": "^5.3.3",
+    "express-validator": "^6.4.1",
     "helmet": "^3.22.0",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.3",
     "uuid": "^8.0.0"
   },
   "devDependencies": {
