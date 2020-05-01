@@ -8,6 +8,7 @@ const validationConstrains = [
     check('id').isLength({ min: 32, max: 32 }),
     check('name').not().isEmpty(),
     check('birth').isISO8601(),
+    check('products').not().isEmpty(),
     check('products.*.id').isInt({ gt: 0, lt: 10 }),
     check('products.*.name').not().isEmpty(),
     check('products.*.price').isInt({ gt: 100, lt: 500 }),
