@@ -48,9 +48,11 @@ Th existing API routes are
 
 - the `object` routes are for the challenge response to the "Create an endpoint that can store the object; Create an endpoint that can query and return the stored object;"
 - Products are hosted in `/server/data/products.json`
-- It was not requested, by I would spend some time creating a very simple test suite to make sure, no matter what was changed, the application would still work correctly across time
 
 ## How to start
 
-- `npm start` will run the server
-- use the `http` files to do requests to the server
+1. `npm i` will install the packages
+2. `npm start` will run the server
+3. use the `http` files to do requests to the server
+
+copy the given token and replace the existing one named `@TOKEN` (do not use quotes) in each `.http` file
