@@ -1,0 +1,12 @@
+{
+  "name": "heap-challenge",
+  "version": "1.0.0",
+  "description": "Your task is to build a simple stateless service in Nodejs, with three major functionalities -",
+  "author": "Bruno Alexandre <bruno.in.dk@gmail.com>",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/server.js"
+  }
+}
