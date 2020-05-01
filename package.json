@@ -1,12 +1,23 @@
 {
   "name": "heap-challenge",
   "version": "1.0.0",
-  "description": "Your task is to build a simple stateless service in Nodejs, with three major functionalities -",
+  "description": "Heap challenge - Stateless service in Nodejs",
   "author": "Bruno Alexandre <bruno.in.dk@gmail.com>",
   "keywords": [],
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server/server.js"
+    "start": "node ./server/server.js",
+    "test:lint": "npx eslint ./**/*.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
   }
 }
